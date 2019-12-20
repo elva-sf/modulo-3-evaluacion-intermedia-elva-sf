@@ -15,7 +15,7 @@ class App extends React.Component {
   render() {
     return (
       <React.Fragment>
-        {/* <div className="App">{JSON.stringify(this.state.pokemons)}</div> */}
+        <h1 className="listTitle">Mi lista de pokemon</h1>
         <PokeList>
           {[
             this.state.pokemons.map((pokemon, index) => {

@@ -1,12 +1,19 @@
 import React from "react";
 
 function Pokemon(props) {
-  console.log(props.pokemon);
   return (
     <li className="poke-card">
-      <img></img>
-      <h2></h2>
-      <ul></ul>
+      <img src={props.pokemon.url}></img>
+      <h2 className="poke-name">{props.pokemon.name}</h2>
+      <ul className="poke-typesList">
+        {props.pokemon.types.map((type, index) => {
+          return (
+            <li key={index} className="poke-type">
+              {type}
+            </li>
+          );
+        })}
+      </ul>
     </li>
   );
 }
