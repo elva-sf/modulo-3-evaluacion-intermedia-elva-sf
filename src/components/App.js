@@ -18,8 +18,8 @@ class App extends React.Component {
         <h1 className="listTitle">Mi lista de pokemon</h1>
         <PokeList>
           {[
-            this.state.pokemons.map((pokemon, index) => {
-              return <Pokemon key={index} pokemon={pokemon} />;
+            this.state.pokemons.map(pokemon => {
+              return <Pokemon key={pokemon.id} pokemon={pokemon} />;
             })
           ]}
         </PokeList>
@@ -27,5 +27,4 @@ class App extends React.Component {
     );
   }
 }
-
 export default App;

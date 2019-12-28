@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 function PokeList(props) {
   return (
@@ -7,5 +8,8 @@ function PokeList(props) {
     </div>
   );
 }
+PokeList.propTypes = {
+  children: PropTypes.array.isRequired
+};
 
 export default PokeList;
